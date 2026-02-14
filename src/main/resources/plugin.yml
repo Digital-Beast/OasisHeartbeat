@@ -1,0 +1,4 @@
+name: OasisHeartbeat
+version: '1.0.0'
+main: me.outlawoasis.oasisHeartbeat.OasisHeartbeat
+api-version: '1.21'
