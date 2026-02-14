@@ -31,14 +31,12 @@ public class OasisHeartbeat extends JavaPlugin {
 
         if (config.isReaderEnabled()) {
             new HeartbeatReader(this, api, config).start();
-            if (config.isReaderEnabled()) {
-                new HeartbeatReader(this, api, config).start();
 
                 if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
                     new HeartbeatExpansion(this).register();
                     getLogger().info("PlaceholderAPI hook enabled.");
                 }
-            }
+
 
         }
 

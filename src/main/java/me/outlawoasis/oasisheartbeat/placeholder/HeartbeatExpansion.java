@@ -78,7 +78,7 @@ public class HeartbeatExpansion extends PlaceholderExpansion {
                     ? plugin.getHeartbeatConfig().getOnlineText()
                     : plugin.getHeartbeatConfig().getOfflineText();
 
-            default -> "N/A";
+            default -> "§7Unknown";
         };
     }
 }

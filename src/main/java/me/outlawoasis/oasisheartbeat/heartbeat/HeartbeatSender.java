@@ -45,8 +45,9 @@ public class HeartbeatSender {
             // 3) Redis key
             String key = "oasis:heartbeat:" + config.getServerName();
 
+            plugin.getLogger().info("[HB-SENDER] TTL=" + config.getTtlSeconds());
             // 4) Write to Redis (SET + EXPIRE)
-            api.getRedis().set(key, json, config.getTtlSeconds());
+            api.getRedis().setex(key, config.getTtlSeconds(), json);
 
             // 5) Verbose logging
             if (config.getVerboseLevel() == HeartbeatConfig.VerboseLevel.ALL) {
