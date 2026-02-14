@@ -1,0 +1,69 @@
+# ┌───────────────────────────────────────────────────────────────┐
+# │                      Oasis Heartbeat                          │
+# └───────────────────────────────────────────────────────────────┘
+
+
+server:
+  name: "Survival"
+  port: 25565
+
+heartbeat:
+  enabled: true
+  interval: 5
+  ttl: -1        # -1 = interval * 2
+  verbose: "error"  # none, error, all
+
+sender:
+  enabled: true
+
+reader:
+  enabled: true
+  show-self: false
+
+
+
+measurements:
+  #Placeholder: %hb_survival_players%   →   online spillere
+  players: true
+
+  #Placeholder: %hb_survival_maxplayers%   →   max slots
+  maxplayers: true
+
+  #Placeholder: %hb_survival_tps%   →   serverens TPS
+  tps: true
+
+  #Placeholder: %hb_survival_mspt%   →   millisekunder pr. tick
+  mspt: true
+
+  #Placeholder: %hb_survival_cpu%   →   CPU load
+  cpu: true
+
+  #Placeholder: %hb_survival_ram%   →   RAM forbrug
+  ram: true
+
+  #Placeholder: %hb_survival_ping%   →   gennemsnitlig spiller ping
+  ping: true
+
+  #Placeholder: %hb_survival_chunks%   →   antal loaded chunks
+  chunks: true
+
+  #Placeholder: %hb_survival_worlds%   →   antal loaded worlds
+  worlds: true
+
+# GENERELT FORMAT:
+# %hb_<server>_<field>%
+# %hb_self_<field>% ← for egen server
+
+
+# %hb_survival_status%       → "online" / "offline"
+# %hb_survival_uptime%       → server uptime i ms
+# %hb_survival_timestamp%    → tidspunkt for sidste heartbeat
+# %hb_survival_ttl%          → heartbeat TTL i sekunder
+
+
+# ┌───────────────────────────────────────────────┐
+# │      Custom status text for placeholders      │
+# └───────────────────────────────────────────────┘
+status-text:
+  online: "§aOnline"
+  offline: "§cOffline"

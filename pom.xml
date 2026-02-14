@@ -64,5 +64,21 @@
             <version>1.21.11-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>me.outlawoasis</groupId>
+            <artifactId>OasisCore</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.PlaceholderAPI</groupId>
+            <artifactId>PlaceholderAPI</artifactId>
+            <version>2.11.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+
     </dependencies>
 </project>
